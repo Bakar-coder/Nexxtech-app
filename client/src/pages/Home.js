@@ -3,6 +3,7 @@ import mockup from "../images/mockup.png";
 import dots from "../images/dots2.png";
 import "./home.scss";
 import { Link } from "react-router-dom/";
+import About from "../components/About";
 
 const Home = () => {
   return (
@@ -33,6 +34,10 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="about" id="about">
+        <About />
       </div>
     </div>
   );

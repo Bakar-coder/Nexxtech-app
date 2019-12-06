@@ -20,6 +20,12 @@ if (!config.get("jwtPrivateKey")) {
   process.exit(1);
 }
 
+// production environment variables
+if (process.env.NODE_ENV === "production" && !config.get("database")) {
+  console.log("Database Connection Error!...");
+  process.exit(1);
+}
+
 // import all app routes
 const users = require("./routes/users"),
   addProduct = require("./routes/admin/addProduct"),

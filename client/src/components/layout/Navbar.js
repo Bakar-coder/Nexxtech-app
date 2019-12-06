@@ -30,7 +30,7 @@ const Navbar = ({ auth, logoutUser, history }) => {
           </li>
 
           <li className="list-item">
-            <Link className="link-item" to="/about">
+            <Link className="link-item" to="#about">
               About
             </Link>
           </li>
