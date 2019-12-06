@@ -1,0 +1,33 @@
+@import "../../styles/variables";
+
+.navbar {
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: $white;
+  background: transparent;
+  z-index: 198;
+  border-bottom: 1px solid rgba($grey, 0.2);
+  box-shadow: $boxShadow;
+
+  & a {
+    color: $white;
+  }
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+
+    & .list-group {
+      display: flex;
+
+      & .list-item {
+        &:not(:last-child) {
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+}

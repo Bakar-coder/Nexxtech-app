@@ -1,0 +1,87 @@
+@import "../styles/variables";
+
+.header {
+  &-section {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    color: $white;
+    text-align: center;
+
+    & .dots {
+      display: none;
+    }
+
+    & .content {
+      height: 100%;
+      margin: auto 0;
+
+      & p {
+        font-size: 2rem;
+        font-weight: 300;
+      }
+
+      & h1 {
+        font-size: 5.2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+      }
+
+      & a {
+        color: $white;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    &-section {
+      & .content {
+        height: 100%;
+        margin: auto 0;
+
+        & img {
+          width: 100%;
+        }
+
+        & p {
+          font-size: 1.6rem;
+          font-weight: 300;
+        }
+
+        & h1 {
+          font-size: 3.2rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  .header {
+    &-section {
+      height: 100%;
+      display: grid;
+      grid-template-columns: 65% auto;
+      text-align: left;
+
+      & .content {
+        margin-top: 7rem;
+      }
+
+      & .img-sec {
+        margin: auto 0;
+        position: relative;
+
+        & .dots {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -3;
+        }
+      }
+    }
+  }
+}

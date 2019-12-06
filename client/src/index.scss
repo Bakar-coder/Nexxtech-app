@@ -1,0 +1,147 @@
+@import "./styles/variables";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  background: $white;
+  overflow-x: hidden;
+  color: $grey;
+
+  & a {
+    text-decoration: none;
+  }
+
+  & ul {
+    list-style-type: none;
+  }
+
+  & input[type="submit"] {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+  }
+
+  & button {
+    outline: none;
+    border: none;
+    padding: 0.8em 2em;
+    border-radius: 2em;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    -ms-border-radius: 2em;
+    -o-border-radius: 2em;
+  }
+
+  & label {
+    color: inherit;
+  }
+}
+
+.container {
+  padding: 0 2rem;
+}
+
+.call-to-action {
+  margin-top: 1.5em;
+
+  & .btn:first-child {
+    margin-right: 1em;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  font-size: inherit;
+  &-primary {
+    background-image: linear-gradient(to left, $blue, $green);
+    color: $white;
+  }
+
+  &-danger {
+    background-image: linear-gradient(to right, $purple, $blue);
+    color: $white;
+  }
+}
+
+.danger {
+  color: $danger;
+}
+
+.success {
+  color: $green;
+}
+
+.top-section {
+  padding-top: 8rem;
+
+  &-login {
+    padding-top: 15rem;
+  }
+}
+
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  & .header {
+    background-image: linear-gradient(to right, $blue, $purple);
+    background-size: cover;
+    height: 100vh;
+    z-index: -1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 1.6rem;
+  }
+
+  .call-to-action {
+    margin-top: 1.5em;
+
+    & .btn {
+      border-radius: 0;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      -o-border-radius: 0;
+      width: 100%;
+      &:first-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .page {
+    & .header {
+      background-image: url("./images/Home_Page_shape.png");
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  body {
+    font-size: 1.8rem;
+  }
+}

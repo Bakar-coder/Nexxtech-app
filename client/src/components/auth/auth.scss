@@ -1,0 +1,99 @@
+@import "../../styles/variables";
+
+.form {
+  border-radius: 1em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -ms-border-radius: 1em;
+  -o-border-radius: 1em;
+}
+
+.form {
+  max-width: 70rem;
+  box-shadow: $boxShadow;
+  margin: 2rem auto auto auto;
+  padding: 5rem 4rem;
+  background: $white;
+  background-image: url("../../images/card-success.png");
+  background-repeat: no-repeat;
+  color: $grey;
+
+  &-content {
+    padding: 0.5rem;
+  }
+
+  &-header {
+    margin-bottom: 2rem;
+    text-align: center;
+
+    & h3 {
+      font-size: 3.2rem;
+      font-weight: 400;
+    }
+  }
+
+  &-group {
+    margin-bottom: 1em;
+    position: relative;
+  }
+
+  &-control {
+    width: 100%;
+    display: block;
+    padding: 1.4rem;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgba($grey, 0.2);
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    background: rgba($white, 0.7);
+
+    &:focus {
+      background: $white;
+      border-bottom: 2px solid $green;
+      box-shadow: $boxShadow;
+    }
+    border-radius: 2em;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    -ms-border-radius: 2em;
+    -o-border-radius: 2em;
+  }
+
+  &-control:focus ~ label {
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+  }
+
+  & .label {
+    opacity: 0;
+    visibility: hidden;
+    background: $white;
+    padding: 0 2rem;
+    border-radius: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 3.5%;
+    transform: translate(-3.5%, -50%);
+    -webkit-transform: translate(-3.5%, -50%);
+    -moz-transform: translate(-3.5%, -50%);
+    -ms-transform: translate(-3.5%, -50%);
+    -o-transform: translate(-3.5%, -50%);
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+  }
+
+  & span {
+    margin-left: 2rem;
+  }
+}
